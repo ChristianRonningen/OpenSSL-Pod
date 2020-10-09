@@ -43,6 +43,7 @@ Pod::Spec.new do |s|
     SRC_TARBALL="openssl-${OPENSSL_VERSION}.tar.gz"
     SRC_URL="https://www.openssl.org/source/${SRC_TARBALL}"
 
+    echo ${PWD}
 #    if [ -f file.tgz ]
 #    then
 #      echo "Using existing file.tgz"
