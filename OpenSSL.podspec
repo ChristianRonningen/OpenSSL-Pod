@@ -43,19 +43,19 @@ Pod::Spec.new do |s|
     SRC_TARBALL="openssl-${OPENSSL_VERSION}.tar.gz"
     SRC_URL="https://www.openssl.org/source/${SRC_TARBALL}"
 
-    if [ -f file.tgz ]
-    then
-      echo "Using existing file.tgz"
-      mv file.tgz $SRC_TARBALL
-    else
-      echo "Downloading from ${SRC_URL}"
-      curl -O "${SRC_URL}"
-      if [ ! -f $SRC_TARBALL ]
-      then
-        echo "Failed to download ${SRC_URL}"
-        exit 1
-      fi
-    fi
+#    if [ -f file.tgz ]
+#    then
+#      echo "Using existing file.tgz"
+#      mv file.tgz $SRC_TARBALL
+#    else
+#      echo "Downloading from ${SRC_URL}"
+#      curl -O "${SRC_URL}"
+#      if [ ! -f $SRC_TARBALL ]
+#      then
+#        echo "Failed to download ${SRC_URL}"
+#        exit 1
+#      fi
+#    fi
 
     # Ensure checksum matches incase we're installing from development pod
     # (Cocoapods checks for us if we're downloading from source)
